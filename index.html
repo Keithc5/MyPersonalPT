@@ -28,7 +28,7 @@ function parseWorkoutNotes(text){
   if(isReps(line)&&current){const nums=line.match(/\d+/g).map(Number);if(nums.length===1){current.repLines.push(nums[0])}else if(/superset/i.test(current.exercise)||/[,;]/.test(line)&&nums.length===2&&/calf/i.test(current.exercise)){current.repLines.push(nums[0]);current.extra.push('Superset pair: '+nums.join(' / ')+' reps')}else{current.repLines.push(...nums)}continue}
   if(current&&/\b(?:bar|kg|kilos?|lbs?|dumbbell|kettlebell|kb|weight|plate|plus|with)\b/i.test(line)&&!isReps(line)){
    current.weightText=line;const exact=line.match(/(?:^|\s)(\d+(?:\.\d+)?)\s*kg\b/i);
-   if(exact&&!/bar|plus|each|side|plate/i.test(line))current.weight=Number(exact[1]);else current.extra.push('Weight needs confirmation: '+line);
+   if(exact&&!/bar|plus|each|side|plate/i.test(line))current.weight=Number(exact[1]);else {const plates=line.match(/\bbar\s*(?:\+|plus|with)\s*(\d+(?:\.\d+)?)\s*(?:s|kg)?\b/i);if(plates){current.weight=20+2*Number(plates[1]);current.extra.push('Assumed 20 kg bar + '+plates[1]+' kg per side = '+current.weight+' kg');}else current.extra.push('Weight needs confirmation: '+line);}
    continue
   }
   if(current&&/^(?:note|felt|pain|rest|rpe|tempo)\b/i.test(line)){current.extra.push(line);continue}
