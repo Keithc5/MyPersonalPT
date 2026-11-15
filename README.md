@@ -24,7 +24,7 @@ The exercise library includes **cross-body kettlebell toe rows**. For this custo
 
 Open the [live site](https://keithc5.github.io/MyPersonalPT/) or open `index.html` in a modern browser. No build tools, dependencies, API keys or server are required.
 
-To import notes, choose **Log workout**, paste your full notes into **Paste workout notes**, select **Convert notes to workout**, review the parsed exercises and save. Unclear weights are not guessed. You can also log manually: choose **Log workout**, enter the session and exercise details, and save. Add another exercise with the same date and session name to build a full session. Review past entries under **History**.
+Under **Log workout**, select one of two modes: **Enter exercises manually** to add exercises one at a time, or **Paste full workout notes** to convert an entire session in one step. For pasted notes, select **Convert notes to workout**, review and edit the resulting exercise entries, then save the whole workout. Weight phrases such as **bar plus 20s** are interpreted as a 20 kg bar plus 20 kg on each side (60 kg total). Check all values before saving. Add another exercise with the same date and session name to build a full session. Review past entries under **History**.
 
 ## Data and privacy
 
