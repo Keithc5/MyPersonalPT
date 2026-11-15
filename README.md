@@ -7,6 +7,7 @@ A mobile-friendly personal training tracker, built as a lightweight static web a
 
 ## Features
 
+- Paste full free-form workout notes and convert them into a reviewed, editable workout draft before saving
 - Log exercises with workout date, session name, sets, reps, weight (kg), RPE and notes
 - Group exercises by date and session name
 - Dashboard showing workout count, sets and estimated training volume
@@ -23,7 +24,7 @@ The exercise library includes **cross-body kettlebell toe rows**. For this custo
 
 Open the [live site](https://keithc5.github.io/MyPersonalPT/) or open `index.html` in a modern browser. No build tools, dependencies, API keys or server are required.
 
-To log a workout, choose **Log workout**, enter the session and exercise details, and save. Add another exercise with the same date and session name to build a full session. Review past entries under **History**.
+To import notes, choose **Log workout**, paste your full notes into **Paste workout notes**, select **Convert notes to workout**, review the parsed exercises and save. Unclear weights are not guessed. You can also log manually: choose **Log workout**, enter the session and exercise details, and save. Add another exercise with the same date and session name to build a full session. Review past entries under **History**.
 
 ## Data and privacy
 
